@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit Workout</title>
+    <h1>Edit Workout</h1>
+    <form action="/pokemon/<%=pokemon._id%>?_method=PUT" method="POST">
+    ID: <input type="text" name="ID" value="<%=pokemon.id%>" /><br/>
+    Name: <input type="text" name="name" value="<%=pokemon.name%>" /><br/>
+    Image: <input type="text" name="img" value="<%=pokemon.img%>" /><br/>
+    Stats: <input type="text" name="stats" value="<%=pokemon.stats%>" /><br/>
+    <input type="submit" value="Submit Changes"/>
+    </form>
+    <br>
+    <a href="/pokemon">
+        <button class="backBttn" type="button" id="back">back</button>
+    </a>
 </head>
 <body>
     
