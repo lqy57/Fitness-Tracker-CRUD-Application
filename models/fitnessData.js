@@ -11,28 +11,28 @@ const fitness = [
         img: String,
         duration: 30,
         difficulty: 2,
-        tags: [String]
+        tags: ['arms', 'lifting', 'bicep']
     },
     {
         title: 'Workout3',
         img: String,
         duration: 45,
         difficulty: 3,
-        tags: [String]
+        tags: ['row', 'back', 'pullups']
     },
     {
         title: 'Workout4',
         img: String,
         duration: 30,
         difficulty: 1,
-        tags: [String]
+        tags: ['chest', 'chestpress', 'dips']
     },
     {
         title: 'Workout5',
         img: String,
         duration: 60,
         difficulty: 5,
-        tags: [String]
+        tags: ['squats', 'deadlifts', 'hipthrust']
     }
 ];
 
