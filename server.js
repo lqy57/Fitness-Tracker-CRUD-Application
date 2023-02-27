@@ -2,6 +2,8 @@
 const express = require('express');
 const app = express();
 
+const mongoose = require('mongoose');
+
 const Fitness = require('./models/fitnessSchema.js')
 const FitnessData = require('./models/fitnessData.js')
 
@@ -89,6 +91,6 @@ app.listen(3000, () => {
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect('mongodb://localhost:27017/pokedex', () => {
+mongoose.connect('mongodb://localhost:27017/fitness', () => {
     console.log('The connection with mongo is established.');
 });

@@ -7,6 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Workouts</h1>
+    <a href="fitness/new">
+        <button>New Workout</button>
+    </a>
+    <div class="container">
+        <% for (let i = 0; i < fitness.length; i++) { %>
+            <a href="/fitness/<%=fitness[i]._id%>">
+            <h1> <%= fitness[i].title %></h1>
+            <img src="<%= fitness[i].img%>">
+            </a>
+        <% } %>
+    </div>
 </body>
 </html>

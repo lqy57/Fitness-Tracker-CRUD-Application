@@ -7,6 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <a href="/fitness/<%= fitness.id; %>/edit">
+        <button>Edit Workout</button>
+    </a>
+    <h1><%=fitness.title%></h1>
+    <img src="<%= fitness.img%>">
+    <p>Duration: <%=fitness.duration%></p>
+    <p>Difficulty: <%=fitness.difficulty%></p>
+    <p>Tags: <%=fitness.tags%></p>
+    <form action="/fitness/<%= fitness.id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete">
+    </form>
+    <a href="/fitness">
+        <button>Back to Workouts</button>
+    </a>
 </body>
 </html>
