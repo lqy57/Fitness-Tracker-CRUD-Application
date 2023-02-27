@@ -39,11 +39,11 @@ app.get('/fitness/seed', (req,res)=> {
 
 // index
 app.get('/fitness', (req, res) => {
-    Fitness.find({}, (err, alldata) => {
+    Fitness.find({}, (err, allData) => {
         res.render('index.ejs', {
-            fitness : alldata
+            fitness: allData
         });
-    });
+    }).sort({date: 1});
 });
 
 // Show
@@ -85,13 +85,12 @@ app.put('/fitness/:id', (req, res)=> {
     });
 });
 
-
 app.listen(3000, () => {
     console.log('listening...');
 });
 
-
 mongoose.set('strictQuery', false);
+
 mongoose.connect(process.env.MONGODB, () => {
     console.log('The connection with mongo is established.');
 });

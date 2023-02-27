@@ -15,6 +15,7 @@
         <% for (let i = 0; i < fitness.length; i++) { %>
             <a href="/fitness/<%=fitness[i]._id%>">
             <h1> <%= fitness[i].title %></h1>
+            <p> <%= fitness[i].date %></p>
             <img src="<%= fitness[i].img%>">
             </a>
         <% } %>
