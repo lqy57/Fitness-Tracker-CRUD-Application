@@ -89,8 +89,8 @@ app.listen(3000, () => {
     console.log('listening...');
 });
 
-mongoose.set('strictQuery', false);
 
-mongoose.connect('mongodb://localhost:27017/fitness', () => {
+mongoose.set('strictQuery', false);
+mongoose.connect(process.env.MONGODB, () => {
     console.log('The connection with mongo is established.');
 });
