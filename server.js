@@ -92,5 +92,5 @@ app.listen(3000, () => {
 mongoose.set('strictQuery', false);
 
 mongoose.connect(process.env.MONGODB, () => {
-    console.log('The connection with mongo is established.');
+    // console.log('The connection with mongo is established.');
 });
