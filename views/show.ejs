@@ -4,23 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!--BOOTSTRAP CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <title><%=fitness.title%></title>
 </head>
 <body>
-    <a href="/fitness/<%=fitness.id%>/edit">
-        <button>Edit Workout</button>
-    </a>
-    <h1><%=fitness.title%></h1>
-    <p>Date: <%=fitness.date%></p>
-    <img src="<%= fitness.img%>">
-    <p>Duration: <%=fitness.duration%></p>
-    <p>Difficulty: <%=fitness.difficulty%></p>
-    <p>Tags: <%=fitness.tags%></p>
-    <form action="/fitness/<%= fitness.id %>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete">
-    </form>
-    <a href="/fitness">
-        <button>Back to Workouts</button>
-    </a>
+    <div class="container showContainer mt-5">
+        <div class="row showHead">
+            <div class="col-5">
+                <h1><%=fitness.title%></h1>
+            </div>
+            <div class="col-7 mb-0 dateHead">
+                <p>Date: <%=fitness.date%></p>
+            </div>
+        </div>
+        <div class="row showImgRow">
+                <img class="showImg" src="<%= fitness.img%>">
+        </div>
+        <a href="/fitness/<%=fitness.id%>/edit">
+            <button class="btn btn-secondary">Edit Workout</button>
+        </a>
+        <p>Duration: <%=fitness.duration%></p>
+        <p>Difficulty: <%=fitness.difficulty%></p>
+        <p>Tags: <%=fitness.tags%></p>
+        <form action="/fitness/<%= fitness.id %>?_method=DELETE" method="POST">
+            <input class="btn btn-danger" type="submit" value="Delete">
+        </form>
+        <br>
+        <br>
+    </div>
+    <div class="container">
+        <a href="/fitness">
+            <button>Back to Workouts</button>
+        </a>
+    </div>
+
+
+
+
+
 </body>
 </html>
