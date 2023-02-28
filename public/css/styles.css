@@ -17,9 +17,9 @@ h2 {
 
 h1 {
     font-size: 64px;
-    color: #0a5282;
+    /* color: #0a5282; */
 }
-/* INDEX CLASS STYLES */
+/* INDEX PAGE CLASS STYLES */
 .workoutContent {
     background-color: whitesmoke;
     border-radius: 10px;
@@ -50,17 +50,16 @@ button.btn{
 }
 .indexHead {
     text-align: center;
+    color: #0a5282;
 }
 .createBttnIndex {
     text-align: center;
 }
 
-/* SHOW CLASS STYLES */
+/* SHOW PAGE CLASS STYLES */
 
 .showContainer {
     background-color: whitesmoke;
-    /* border: 5px solid black; */
-    /* padding: 10px; */
     max-width: 1000px ;
 }
 
@@ -68,17 +67,23 @@ button.btn{
     font-size: 20px;
 }
 .showHead {
-    background-color: white;
     text-align: center;
     vertical-align: middle;
+    justify-content: center;
     line-height: 90px;   
 }
+
 .dateHead {
-    background-color: #0a5282;
+    /* background-color: #0a5282; */
     color: white;
+    background-color: black;
     font-size: 24px;
-    justify-content: center;
     margin: 0;
+}
+
+.titleHead {
+    padding-top: 10px;
+
 }
 .dateHead p {
     font-size: 32px;
@@ -88,8 +93,8 @@ button.btn{
 .showImg {
     max-height: 600px;
     width: auto;
-
 }
+
 .showImgRow {
     justify-content: center;
 }
@@ -105,3 +110,21 @@ button.btn{
 .editShow {
     margin-right: -30px;
 }
+/* NEW PAGE CLASS STYLES */
+
+.newh1 {
+    text-align: center;
+}
+.newForm {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.newBack {
+    text-align: center;
+    margin-top: -30px;
+    font-size: 18px;
+}
+
+/* EDIT PAGE CLASS STYLES */
+

@@ -16,7 +16,7 @@
 <body>
     <div class="container showContainer mt-5">
         <div class="row showHead">
-            <div class="col-5">
+            <div class="col-5 titleHead">
                 <h1><%=fitness.title%></h1>
             </div>
             <div class="col-7 mb-0 dateHead">
@@ -26,7 +26,7 @@
         <div class="row showImgRow">
                 <img class="showImg" src="<%= fitness.img%>">
         </div>
-        <div class="row showBttns">
+        <div class="row showBttns mt-3">
             <div class="col-3 offset-7 editShow">
                 <a href="/fitness/<%=fitness.id%>/edit">
                     <button class="btn btn-secondary">Edit Workout</button>
