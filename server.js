@@ -60,7 +60,7 @@ app.get('/fitness/:id', (req,res) => {
 // Delete Route
 app.delete('/fitness/:id', (req, res) => {
     Fitness.findByIdAndDelete(req.params.id, (err, data) => {
-        res.redirect('/fitness');
+        res.redirect('/');
     });
 });
 
@@ -74,16 +74,16 @@ app.get('/fitness/:id/edit', (req, res)=> {
 });
 
 //Create Route
-app.post('/fitness', (req,res)=> {
+app.post('/', (req,res)=> {
     Fitness.create(req.body, (err, newWorkout)=> {
-        res.redirect('/fitness')
+        res.redirect('/')
     });
 });
 
 //Update route
 app.put('/fitness/:id', (req, res)=> {
     Fitness.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedWorkout) => {
-        res.redirect('/fitness');
+        res.redirect('/');
     });
 });
 
