@@ -10,6 +10,8 @@ const FitnessData = require('./models/fitnessData.js')
 const methodOverride = require('method-override');
 app.use(methodOverride("_method"));
 
+const PORT = process.env.PORT || 3000;
+
 //.ENV
 require('dotenv').config()
 
@@ -85,12 +87,12 @@ app.put('/fitness/:id', (req, res)=> {
     });
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('listening...');
 });
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect(process.env.MONGODB, () => {
+mongoose.connect(process.env.MONGO_URI, () => {
     console.log('The connection with mongo is established.');
 });
