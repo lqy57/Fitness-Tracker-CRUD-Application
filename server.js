@@ -40,7 +40,7 @@ app.get('/fitness/seed', (req,res)=> {
 });
 
 // index
-app.get('/fitness', (req, res) => {
+app.get('/', (req, res) => {
     Fitness.find({}, (err, allData) => {
         res.render('index.ejs', {
             fitness: allData
