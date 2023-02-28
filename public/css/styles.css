@@ -61,16 +61,30 @@ button.btn{
     background-color: whitesmoke;
     /* border: 5px solid black; */
     /* padding: 10px; */
+    max-width: 1000px ;
+}
+
+.showContainer p {
+    font-size: 20px;
 }
 .showHead {
     background-color: white;
     text-align: center;
+    vertical-align: middle;
+    line-height: 90px;   
 }
 .dateHead {
     background-color: #0a5282;
     color: white;
     font-size: 24px;
+    justify-content: center;
+    margin: 0;
 }
+.dateHead p {
+    font-size: 32px;
+    margin: 0;
+}
+
 .showImg {
     max-height: 600px;
     width: auto;
@@ -78,4 +92,16 @@ button.btn{
 }
 .showImgRow {
     justify-content: center;
+}
+
+.deleteBttn {
+    font-size: 24px;
+}
+.showBack {
+    font-size: 24px;
+    margin-left: -150px ;
+}
+
+.editShow {
+    margin-right: -30px;
 }
